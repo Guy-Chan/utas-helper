@@ -90,9 +90,9 @@ scoop install winget
 scoop install oh-my-posh
 scoop install CascadiaCode-NF-Mono
 if (-not(Test-Path ~/repos)) { mkdir ~/repos/utas -Force }
-gh repo clone Guy-Chan/utas-helper "$env:repos/utas-helper"
+git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
 $wt_settings_path = $(ls "${env:LOCALAPPDATA}/Packages/Microsoft.WindowsTerminal_*/LocalState/settings.json" | Select-Object -Property FullName).FullName
-cp .\wt-setting.json "$wt_settings_path"
+cp "$env:repos/utas-helper/wt-setting.json" "$wt_settings_path"
 echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
 . $PROFILE
     
