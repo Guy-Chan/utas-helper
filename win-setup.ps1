@@ -70,6 +70,7 @@ scoop install aria2
 git -C "$env:scoop\buckets\extras" co 3e7eb49
 scoop install -u powertoys@0.68.1
 scoop install firefox
+scoop install potplayer
 scoop install gh
 scoop install clash
 scoop install zoom
@@ -82,9 +83,8 @@ scoop install carnac
 scoop install sysinternals
 scoop install yt-dlp
 scoop install neofetch
-scoop install potplayer
 scoop install audioswitcher
-scoop install aws
+# scoop install aws
 scoop install winget
 scoop install oh-my-posh
 scoop install CascadiaCode-NF-Mono
