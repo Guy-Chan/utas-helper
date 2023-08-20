@@ -108,8 +108,8 @@ if (-not(Test-Path ~/repos)) {
     mkdir ~/repos/utas -Force
     if ($(whoami) -eq "$USER_GUY") {
         # personal setup, containing some credentials
-        gh repo clone Guy-Chan/personal "$env:repos/personal"
-        . "$env:repos/personal/utas-win-setup.ps1"
+        gh repo clone Guy-Chan/utas-personal "$env:repos/utas-personal"
+        . "$env:repos/utas-personal/utas-win-setup.ps1"
     }
 
 }
