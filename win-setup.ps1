@@ -69,6 +69,7 @@ scoop install aria2
 # fix the version to 0.68.1 as the work around
 git -C "$env:scoop\buckets\extras" co 3e7eb49
 scoop install -u powertoys@0.68.1
+git -C "$env:scoop\buckets\extras" co master
 scoop install firefox
 scoop install potplayer
 scoop install gh
