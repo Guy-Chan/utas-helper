@@ -103,15 +103,12 @@ echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
 # scoop install azure-cli
 # winget install Microsoft.AzureCLI
 gh auth login
-if (-not(Test-Path ~/repos)) {
-    gh repo clone Guy-Chan/utas-helper "$env:repos/utas-helper"
-    mkdir ~/repos/utas -Force
-    if ($(whoami) -eq "$USER_GUY") {
-        # personal setup, containing some credentials
-        gh repo clone Guy-Chan/utas-personal "$env:repos/utas-personal"
-        . "$env:repos/utas-personal/utas-win-setup.ps1"
-    }
-
+gh repo clone Guy-Chan/utas-helper "$env:repos/utas-helper"
+mkdir ~/repos/utas -Force
+if ($(whoami) -eq "$USER_GUY") {
+    # personal setup, containing some credentials
+    gh repo clone Guy-Chan/utas-personal "$env:repos/utas-personal"
+    . "$env:repos/utas-personal/utas-win-setup.ps1"
 }
 
 # ssh -p 8022 10.
