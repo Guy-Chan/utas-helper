@@ -1,6 +1,6 @@
 if (-not(Test-Path $PROFILE)) { mkdir "$PROFILE/.." -Force }
 
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Confirm
+# Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Confirm
 rm $PROFILE -Force
 echo @'
 # set env
