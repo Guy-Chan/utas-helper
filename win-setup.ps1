@@ -89,6 +89,9 @@ scoop install audioswitcher
 scoop install winget
 scoop install oh-my-posh
 scoop install CascadiaCode-NF-Mono
+scoop install tealdeer
+scoop install zip
+tldr --update
 if (-not(Test-Path ~/repos)) { mkdir ~/repos/utas -Force }
 git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
 $wt_settings_path = $(ls "${env:LOCALAPPDATA}/Packages/Microsoft.WindowsTerminal_*/LocalState/settings.json" | Select-Object -Property FullName).FullName
