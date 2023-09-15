@@ -68,8 +68,16 @@ scoop install powertoys
 git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
 unzip -o "$env:repos\utas-helper\PowerToys-setting.zip" -d "$env:LOCALAPPDATA\Microsoft"
 start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden
+
+scoop install zip
+scoop install tealdeer
+tldr --update
+scoop install oh-my-posh
+scoop install CascadiaCode-NF-Mono
+echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
 $wt_settings_path = $(ls "${env:LOCALAPPDATA}/Packages/Microsoft.WindowsTerminal_*/LocalState/settings.json" | Select-Object -Property FullName).FullName
 cp "$env:repos/utas-helper/wt-setting.json" "$wt_settings_path"
+. $PROFILE
 
 scoop install snipaste
 start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\Snipaste.lnk" -WindowStyle Hidden
@@ -87,15 +95,6 @@ scoop install sysinternals
 scoop install yt-dlp
 scoop install neofetch
 scoop install winget
-scoop install zip
-scoop install tealdeer
-tldr --update
-if (-not(Test-Path ~/repos)) { mkdir ~/repos/utas -Force }
-
-scoop install oh-my-posh
-scoop install CascadiaCode-NF-Mono
-echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
-. $PROFILE
     
 # scoop install vagrant
 # scoop install vboxvmservice
@@ -107,6 +106,7 @@ echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
 
 # scoop install azure-cli
 # winget install Microsoft.AzureCLI
+if (-not(Test-Path ~/repos)) { mkdir ~/repos/utas -Force }
 gh auth login
 gh repo clone Guy-Chan/utas-helper "$env:repos/utas-helper"
 mkdir ~/repos/utas -Force
