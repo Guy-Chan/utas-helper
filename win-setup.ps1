@@ -64,12 +64,11 @@ scoop bucket add extras
 scoop bucket add nerd-fonts
 
 scoop install aria2
-# there are issues with powertoys per user 
-# in terms of detecting dotnet runtime installed machine wide,
-# fix the version to 0.68.1 as the work around
-git -C "$env:scoop\buckets\extras" co 3e7eb49
-scoop install -u powertoys@0.68.1
-git -C "$env:scoop\buckets\extras" co master
+
+scoop install powertoys
+unzip -o "$env:repos\utas-helper\PowerToys-setting.zip" -d "$env:LOCALAPPDATA\Microsoft"
+start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden
+
 scoop install firefox
 scoop install potplayer
 scoop install gh
@@ -89,8 +88,8 @@ scoop install audioswitcher
 scoop install winget
 scoop install oh-my-posh
 scoop install CascadiaCode-NF-Mono
-scoop install tealdeer
 scoop install zip
+scoop install tealdeer
 tldr --update
 if (-not(Test-Path ~/repos)) { mkdir ~/repos/utas -Force }
 git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
