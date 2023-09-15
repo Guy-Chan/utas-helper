@@ -75,16 +75,15 @@ scoop install gh
 scoop install clash
 scoop install zoom
 scoop install snipaste
+start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\Snipaste.lnk" -WindowStyle Hidden
+
 scoop install logseq
-scoop install zettlr
 scoop install calibre-normal
 scoop install aria-ng-gui
 scoop install carnac
 scoop install sysinternals
 scoop install yt-dlp
 scoop install neofetch
-scoop install audioswitcher
-# scoop install aws
 scoop install winget
 scoop install oh-my-posh
 scoop install CascadiaCode-NF-Mono
@@ -102,6 +101,9 @@ echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
 # scoop install vboxvmservice
 # scoop install kubectl
 # scoop install virtualbox-np
+# scoop install audioswitcher
+# scoop install zettlr
+# scoop install aws
 
 # scoop install azure-cli
 # winget install Microsoft.AzureCLI
