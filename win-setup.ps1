@@ -95,6 +95,7 @@ scoop install sysinternals
 scoop install yt-dlp
 scoop install neofetch
 scoop install winget
+scoop install jq jid
     
 # scoop install vagrant
 # scoop install vboxvmservice
