@@ -18,6 +18,7 @@ set-alias wl-copy set-clipboard
 # set-alias vbm vboxmanage
 # set-alias k kubectl
 function misc() { cd "$env:utas_repos/utas-misc" }
+function utas() { ."$env:ComSpec/../whoami*" /upn | wl-copy }
 function ict() { ssh "$env:USERNAME@ictteach.its.utas.edu.au" }
 function tracker() { echo 'https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt' | wl-copy }
 function jetbrains() { 
