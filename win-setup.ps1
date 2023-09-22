@@ -45,6 +45,23 @@ if (-not(Test-Path $env:scoop)) {
     iwr -useb get.scoop.sh | iex
 }
 
+function optional_scoop_install() {
+    scoop install snipaste
+    start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\Snipaste.lnk" -WindowStyle Hidden
+
+    scoop install logseq
+    scoop install calibre-normal
+    scoop install aria-ng-gui
+    scoop install carnac
+    scoop install sysinternals
+    scoop install yt-dlp
+    scoop install firefox
+    scoop install potplayer
+    scoop install gh
+    scoop install clash
+    scoop install neofetch
+}
+
 scoop install git
 git config --global alias.fu 'fetch upstream'
 git config --global alias.fo 'fetch origin'
@@ -70,7 +87,7 @@ git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
 unzip -o "$env:repos\utas-helper\PowerToys-setting.zip" -d "$env:LOCALAPPDATA\Microsoft"
 start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden
 
-scoop install zip
+scoop install jq jid marp zip
 scoop install tealdeer
 tldr --update
 scoop install oh-my-posh
@@ -80,23 +97,9 @@ $wt_settings_path = $(ls "${env:LOCALAPPDATA}/Packages/Microsoft.WindowsTerminal
 cp "$env:repos/utas-helper/wt-setting.json" "$wt_settings_path"
 . $PROFILE
 
-scoop install snipaste
-start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\Snipaste.lnk" -WindowStyle Hidden
-
-scoop install firefox
-scoop install potplayer
-scoop install gh
-scoop install clash
 scoop install zoom
-scoop install logseq
-scoop install calibre-normal
-scoop install aria-ng-gui
-scoop install carnac
-scoop install sysinternals
-scoop install yt-dlp
-scoop install neofetch
 scoop install winget
-scoop install jq jid
+
     
 # scoop install vagrant
 # scoop install vboxvmservice
@@ -113,6 +116,8 @@ gh auth login
 gh repo clone Guy-Chan/utas-helper "$env:repos/utas-helper"
 mkdir ~/repos/utas -Force
 if ($(whoami) -eq "$USER_GUY") {
+    optional_scoop_install
+    
     # personal setup, containing some credentials
     gh repo clone Guy-Chan/utas-personal "$env:repos/utas-personal"
     . "$env:repos/utas-personal/utas-win-setup.ps1"
