@@ -84,8 +84,15 @@ scoop bucket add nerd-fonts
 scoop install aria2
 scoop install powertoys
 git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
-unzip -o "$env:repos\utas-helper\PowerToys-setting.zip" -d "$env:LOCALAPPDATA\Microsoft"
-start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden
+
+# Unzip and replace the PT settings  
+unzip -o "$env:repos\utas-helper\PowerToys-setting.zip" -d "$env:LOCALAPPDATA\Microsoft"  
+  
+# Terminate the PowerToys process  
+Get-Process PowerToys -ErrorAction SilentlyContinue | Stop-Process  
+  
+# Start PowerToys  
+start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden  
 
 scoop install jq jid marp zip
 scoop install tealdeer
