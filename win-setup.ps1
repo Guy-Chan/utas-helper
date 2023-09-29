@@ -118,13 +118,11 @@ scoop install winget
 
 # scoop install azure-cli
 # winget install Microsoft.AzureCLI
-if (-not(Test-Path ~/repos)) { mkdir ~/repos/utas -Force }
-gh auth login
-gh repo clone Guy-Chan/utas-helper "$env:repos/utas-helper"
-mkdir ~/repos/utas -Force
+
 if ($(whoami) -eq "$USER_GUY") {
     optional_scoop_install
-    
+    gh auth login
+    mkdir ~/repos/utas -Force
     # personal setup, containing some credentials
     gh repo clone Guy-Chan/utas-personal "$env:repos/utas-personal"
     . "$env:repos/utas-personal/utas-win-setup.ps1"
