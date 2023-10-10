@@ -48,7 +48,6 @@ if (-not(Test-Path $env:scoop)) {
 function optional_scoop_install() {
     scoop install snipaste
     start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\Snipaste.lnk" -WindowStyle Hidden
-
     scoop install logseq
     scoop install calibre-normal
     scoop install aria-ng-gui
@@ -57,7 +56,7 @@ function optional_scoop_install() {
     scoop install yt-dlp
     scoop install firefox
     scoop install potplayer
-    scoop install gh
+
     scoop install clash
     scoop install neofetch
 }
@@ -120,6 +119,7 @@ scoop install winget
 # winget install Microsoft.AzureCLI
 
 if ($(whoami) -eq "$USER_GUY") {
+    scoop install gh
     gh auth login
     mkdir ~/repos/utas -Force
     # personal setup, containing some credentials
