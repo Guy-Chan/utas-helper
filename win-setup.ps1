@@ -141,7 +141,17 @@ if ($(whoami) -eq "$USER_GUY") {
 }
 
 # reload WindowsTerminal
+# Get the current WindowsTerminal process  
+$currentProcess = Get-Process WindowsTerminal -ErrorAction SilentlyContinue | Select-Object -First 1  
+  
+# Start a new WindowsTerminal process  
 Start-Process wt  
-(Get-Process WindowsTerminal -ErrorAction SilentlyContinue | Select-Object -First 1) | Stop-Process 
+  
+# Stop the current WindowsTerminal process  
+if ($currentProcess) {  
+    Stop-Process -Id $currentProcess.Id  
+} else {  
+    Write-Output "Current WindowsTerminal process not found."  
+}  
 
 # ssh -p 8022 10.
