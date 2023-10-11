@@ -99,8 +99,21 @@ tldr --update
 scoop install oh-my-posh
 scoop install CascadiaCode-NF-Mono
 echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
+
+# restore wt settings.json
 $wt_settings_path = $(ls "${env:LOCALAPPDATA}/Packages/Microsoft.WindowsTerminal_*/LocalState/settings.json" | Select-Object -Property FullName).FullName
 cp "$env:repos/utas-helper/wt-setting.json" "$wt_settings_path"
+
+# restore wt state.json
+$wt_state_path = $(ls "${env:LOCALAPPDATA}/Packages/Microsoft.WindowsTerminal_*/LocalState/state.json" | Select-Object -Property FullName).FullName
+$json = Get-Content -Path "$wt_state_path" | ConvertFrom-Json  
+# Check if the dismissedMessages property already exists  
+if (-not $json.PSObject.Properties.Name -contains "dismissedMessages") {  
+    # If it doesn't exist, add the dismissedMessages property  
+    $json | Add-Member -Type NoteProperty -Name "dismissedMessages" -Value @("setAsDefault")  
+}  
+# Save the modified JSON content  
+$json | ConvertTo-Json | Set-Content "$wt_state_path"
 
 scoop install zoom
 scoop install winget
