@@ -101,7 +101,6 @@ scoop install CascadiaCode-NF-Mono
 echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
 $wt_settings_path = $(ls "${env:LOCALAPPDATA}/Packages/Microsoft.WindowsTerminal_*/LocalState/settings.json" | Select-Object -Property FullName).FullName
 cp "$env:repos/utas-helper/wt-setting.json" "$wt_settings_path"
-. $PROFILE
 
 scoop install zoom
 scoop install winget
@@ -127,5 +126,9 @@ if ($(whoami) -eq "$USER_GUY") {
     . "$env:repos/utas-personal/utas-win-setup.ps1"
     optional_scoop_install
 }
+
+# reload WindowsTerminal
+Start-Process wt  
+(Get-Process WindowsTerminal -ErrorAction SilentlyContinue | Select-Object -First 1) | Stop-Process 
 
 # ssh -p 8022 10.
