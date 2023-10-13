@@ -93,7 +93,7 @@ Get-Process PowerToys -ErrorAction SilentlyContinue | Stop-Process
 # Start PowerToys  
 start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden  
 
-scoop install jq jid marp zip
+scoop install jq jid marp zip pandoc
 scoop install tealdeer
 tldr --update
 scoop install oh-my-posh
