@@ -61,6 +61,11 @@ function optional_scoop_install() {
     scoop install neofetch
 }
 
+function code_extensions_install() {
+    code --install-extension ms-vscode.powershell
+    code --install-extension GitHub.copilot
+}
+
 scoop install git
 git config --global alias.fu 'fetch upstream'
 git config --global alias.fo 'fetch origin'
