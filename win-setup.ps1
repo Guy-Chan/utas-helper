@@ -142,6 +142,7 @@ if ($(whoami) -eq "$USER_GUY") {
     # personal setup, containing some credentials
     gh repo clone Guy-Chan/utas-personal "$env:repos/utas-personal"
     . "$env:repos/utas-personal/utas-win-setup.ps1"
+    code_extensions_install
     optional_scoop_install
 }
 
