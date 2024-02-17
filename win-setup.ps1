@@ -59,7 +59,7 @@ function optional_scoop_install() {
     scoop install potplayer
 
     scoop install clash
-    scoop install neofetch
+    scoop install fastfetch
 }
 
 function code_extensions_install() {
