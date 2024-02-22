@@ -90,6 +90,12 @@ scoop install aria2
 scoop install powertoys
 git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
 
+scoop install jq jid marp zip pandoc
+scoop install tealdeer
+tldr --update
+scoop install oh-my-posh
+scoop install CascadiaCode-NF-Mono
+
 # Unzip and replace the PT settings  
 unzip -o "$env:repos\utas-helper\PowerToys-setting.zip" -d "$env:LOCALAPPDATA\Microsoft"  
   
@@ -99,11 +105,6 @@ Get-Process PowerToys -ErrorAction SilentlyContinue | Stop-Process
 # Start PowerToys  
 start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden  
 
-scoop install jq jid marp zip pandoc
-scoop install tealdeer
-tldr --update
-scoop install oh-my-posh
-scoop install CascadiaCode-NF-Mono
 echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
 
 # restore wt settings.json
