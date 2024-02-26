@@ -17,6 +17,7 @@ set-alias wl-copy set-clipboard
 # set-alias v vagrant
 # set-alias vbm vboxmanage
 # set-alias k kubectl
+function helper() { cd "$env:repos/utas-helper" }
 function misc() { cd "$env:utas_repos/utas-misc" }
 function utas() { ."$env:ComSpec/../whoami*" /upn | wl-copy }
 function ict() { ssh "$env:USERNAME@ictteach.its.utas.edu.au" }
@@ -55,7 +56,7 @@ function optional_scoop_install() {
     scoop install carnac
     scoop install sysinternals
     scoop install yt-dlp
-    scoop install firefox
+    scoop install firefox vivaldi
     scoop install potplayer
 
     scoop install clash
@@ -87,23 +88,29 @@ scoop bucket add extras
 scoop bucket add nerd-fonts
 
 scoop install aria2
+scoop config aria2-warning-enabled false
+
 scoop install powertoys
 git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
 
-scoop install jq jid marp zip pandoc
+scoop install jq jid marp zip pandoc msys2
 scoop install tealdeer
 tldr --update
 scoop install oh-my-posh
 scoop install CascadiaCode-NF-Mono
 
-# Unzip and replace the PT settings  
-unzip -o "$env:repos\utas-helper\PowerToys-setting.zip" -d "$env:LOCALAPPDATA\Microsoft"  
+# cp the backup PT settings  
+$ptb="~\Documents\PowerToys\Backup\*ptb"
+if (-not(Test-Path $ptb)) { 
+    mkdir "$ptb/.." -Force 
+    cp "$env:repos\utas-helper\*ptb" "$ptb/.."
+    }
   
-# Terminate the PowerToys process  
-Get-Process PowerToys -ErrorAction SilentlyContinue | Stop-Process  
+# # Terminate the PowerToys process  
+# Get-Process PowerToys -ErrorAction SilentlyContinue | Stop-Process  
   
-# Start PowerToys  
-start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden  
+# # Start PowerToys  
+# start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden  
 
 echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
 
