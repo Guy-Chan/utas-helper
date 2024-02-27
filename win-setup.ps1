@@ -103,13 +103,13 @@ $ptb="~\Documents\PowerToys\Backup\*ptb"
 if (-not(Test-Path $ptb)) { 
     mkdir "$ptb/.." -Force 
     cp "$env:repos\utas-helper\*ptb" "$ptb/.."
-    }
+}
   
 # # Terminate the PowerToys process  
-# Get-Process PowerToys -ErrorAction SilentlyContinue | Stop-Process  
+Get-Process PowerToys -ErrorAction SilentlyContinue | Stop-Process  
   
 # # Start PowerToys  
-# start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden  
+start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden  
 
 echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
 
