@@ -31,14 +31,8 @@
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "defaultProfile": "{f03f8a63-db95-44fa-9263-7b3164e595e7}",
     "launchMode": "focus",
-    "newTabMenu": 
-    [
-        {
-            "type": "remainingProfiles"
-        }
-    ],
     "profiles": 
     {
         "defaults": 
@@ -70,28 +64,11 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{4157c919-955b-5eb0-9a0b-f603a6b89390}",
+                "commandline": "C:\\Users\\ychen99\\scoop\\shims\\mingw64.cmd -defterm -no-start",
+                "guid": "{f03f8a63-db95-44fa-9263-7b3164e595e7}",
                 "hidden": false,
-                "name": "Developer Command Prompt for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{012fc10f-97ca-5111-afc4-f0e49343bf8f}",
-                "hidden": false,
-                "name": "Developer PowerShell for VS 2022",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{9c955d31-81bc-51b7-bd82-5f6d4b7428bb}",
-                "hidden": true,
-                "name": "Developer Command Prompt for VS 2019",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{00f7588d-8a60-5a44-8232-4492446cb832}",
-                "hidden": true,
-                "name": "Developer PowerShell for VS 2019",
-                "source": "Windows.Terminal.VisualStudio"
+                "icon": "C:\\Users\\ychen99\\scoop\\apps\\msys2\\current\\mingw64.ico",
+                "name": "mingw64"
             }
         ]
     },
@@ -305,50 +282,5 @@
             "yellow": "#808000"
         }
     ],
-    "startOnUserLogin": true,
-    "themes": 
-    [
-        {
-            "name": "legacyDark",
-            "tab": 
-            {
-                "background": null,
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "window": 
-            {
-                "applicationTheme": "dark",
-                "useMica": false
-            }
-        },
-        {
-            "name": "legacyLight",
-            "tab": 
-            {
-                "background": null,
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "window": 
-            {
-                "applicationTheme": "light",
-                "useMica": false
-            }
-        },
-        {
-            "name": "legacySystem",
-            "tab": 
-            {
-                "background": null,
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "window": 
-            {
-                "applicationTheme": "system",
-                "useMica": false
-            }
-        }
-    ]
+    "startOnUserLogin": true
 }
