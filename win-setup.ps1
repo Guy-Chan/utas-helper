@@ -116,8 +116,8 @@ if (-not(Test-Path $ptb)) {
     cp "$env:repos\utas-helper\*ptb" "$ptb/.."
 }
 
-# restore msys2 .bashrc
-cp "$env:repos\utas-helper\msys2-bashrc" "$env:scoop\apps\msys2\current\home\$(whoami)\.bashrc" 
+# restore msys2 .profile
+cp "$env:repos\utas-helper\msys2-profile" "$env:scoop\apps\msys2\current\home\$(whoami)\.profile" 
   
 # # Terminate the PowerToys process  
 Get-Process PowerToys -ErrorAction SilentlyContinue | Stop-Process  
