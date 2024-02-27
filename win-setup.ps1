@@ -1,3 +1,4 @@
+$ErrorActionPreference = 'silentlycontinue'
 if (-not(Test-Path $PROFILE)) { mkdir "$PROFILE/.." -Force }
 
 # Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Confirm
