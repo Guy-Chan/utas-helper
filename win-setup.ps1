@@ -39,6 +39,16 @@ function sync($git_dir){
 '@ | ac $PROFILE
 . $PROFILE
 
+$ErrorActionPreference = 'silentlycontinue'
+if (not(gcm code)) {
+    echo @'
+# add code to env
+$env:path = ";$env:ProgramFiles\Microsoft VS Code"`
++ ";$env:path"
+'@ | ac $PROFILE
+    . $PROFILE
+}
+
 $USER_GUY = 'ychen99'
 # allow policy
 if (-not(Test-Path $env:scoop)) {
@@ -103,13 +113,16 @@ $ptb="~\Documents\PowerToys\Backup\*ptb"
 if (-not(Test-Path $ptb)) { 
     mkdir "$ptb/.." -Force 
     cp "$env:repos\utas-helper\*ptb" "$ptb/.."
-    }
+}
+
+# restore msys2 .bashrc
+cp "$env:repos\utas-helper\msys2-bashrc" "$env:scoop\apps\msys2\current\home\$(whoami)\.bashrc" 
   
 # # Terminate the PowerToys process  
-# Get-Process PowerToys -ErrorAction SilentlyContinue | Stop-Process  
+Get-Process PowerToys -ErrorAction SilentlyContinue | Stop-Process  
   
 # # Start PowerToys  
-# start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden  
+start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden  
 
 echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
 
