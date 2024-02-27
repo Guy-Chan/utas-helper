@@ -47,7 +47,7 @@ if (-not(Test-Path $env:scoop)) {
 }
 
 function optional_scoop_install() {
-    scoop install mosh-client
+    # scoop install mosh-client
     scoop install snipaste
     start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\Snipaste.lnk" -WindowStyle Hidden
     scoop install logseq
@@ -60,7 +60,6 @@ function optional_scoop_install() {
     scoop install potplayer
 
     scoop install clash
-    scoop install fastfetch
 }
 
 function code_extensions_install() {
@@ -93,7 +92,7 @@ scoop config aria2-warning-enabled false
 scoop install powertoys
 git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
 
-scoop install jq jid marp zip pandoc msys2
+scoop install jq jid marp zip pandoc msys2 fastfetch dua
 scoop install tealdeer
 tldr --update
 scoop install oh-my-posh
