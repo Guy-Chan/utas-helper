@@ -40,11 +40,12 @@ function sync($git_dir){
 '@ | ac $PROFILE
 . $PROFILE
 
-$ErrorActionPreference = 'silentlycontinue'
-if (not(gcm code)) {
+$ErrorActionPreference = 'SilentlyContinue'
+$cmdlet = Get-Command -Name "code" -ErrorAction SilentlyContinue
+if ($cmdlet -eq $null) {
     echo @'
 # add code to env
-$env:path = ";$env:ProgramFiles\Microsoft VS Code"`
+$env:path = ";$env:ProgramFiles\Microsoft VS Code\bin"`
 + ";$env:path"
 '@ | ac $PROFILE
     . $PROFILE
@@ -76,6 +77,9 @@ function optional_scoop_install() {
 function code_extensions_install() {
     code --install-extension ms-vscode.powershell
     code --install-extension GitHub.copilot
+    code --install-extension ms-python.debugpy
+    code --install-extension ms-python.python
+    code --install-extension ms-python.vscode-pylance
 }
 
 scoop install git
