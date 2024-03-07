@@ -1,14 +1,16 @@
 # utas-helper
 Utas machine setup helper
 
-## allow script execution
+## For windows Machine
+
+### First step, allow script execution
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Confirm
 ```
 
-## init helper
+### Initiate set-up process
 
 ```powershell
-iwr -useb https://raw.githubusercontent.com/Guy-Chan/utas-helper/main/win-setup.ps1 | iex
+iwr -useb https://bit.ly/utas-setup-win | iex
 ```
