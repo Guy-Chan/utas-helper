@@ -54,7 +54,6 @@ $env:path = ";$env:ProgramFiles\Microsoft VS Code\bin"`
 $USER_GUY = 'ychen99'
 # allow policy
 if (-not(Test-Path $env:scoop)) {
-    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Confirm
     iwr -useb get.scoop.sh | iex
 }
 
@@ -81,6 +80,8 @@ function code_extensions_install() {
     code --install-extension ms-python.python
     code --install-extension ms-python.vscode-pylance
 }
+
+code_extensions_install
 
 scoop install git
 git config --global alias.fu 'fetch upstream'
@@ -168,7 +169,6 @@ if ($(whoami) -eq "$USER_GUY") {
     # personal setup, containing some credentials
     gh repo clone Guy-Chan/utas-personal "$env:repos/utas-personal"
     . "$env:repos/utas-personal/utas-win-setup.ps1"
-    code_extensions_install
     optional_scoop_install
 }
 
