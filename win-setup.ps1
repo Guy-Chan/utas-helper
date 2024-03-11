@@ -78,7 +78,7 @@ function code_extensions_install() {
     code --install-extension GitHub.copilot
     code --install-extension ms-python.debugpy
     code --install-extension ms-python.python
-    code --install-extension ms-python.vscode-pylance
+    code --install-extension KevinRose.vsc-python-indent
 }
 
 code_extensions_install
