@@ -79,6 +79,7 @@ function code_extensions_install() {
     code --install-extension ms-python.debugpy
     code --install-extension ms-python.python
     code --install-extension KevinRose.vsc-python-indent
+    code --install-extension charliermarsh.ruff
 }
 
 code_extensions_install
