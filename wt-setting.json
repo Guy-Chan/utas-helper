@@ -64,11 +64,11 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "commandline": "C:\\Users\\ychen99\\scoop\\shims\\mingw64.cmd -defterm -no-start",
+                "commandline": "%USERPROFILE%\\scoop\\shims\\msys2.cmd -defterm -no-start",
                 "guid": "{f03f8a63-db95-44fa-9263-7b3164e595e7}",
                 "hidden": false,
-                "icon": "C:\\Users\\ychen99\\scoop\\apps\\msys2\\current\\mingw64.ico",
-                "name": "mingw64"
+                "icon": "%USERPROFILE%\\scoop\\apps\\msys2\\current\\msys2.ico",
+                "name": "msys2"
             }
         ]
     },
