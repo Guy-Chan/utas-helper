@@ -110,8 +110,8 @@ scoop install powertoys
 git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
 
 scoop install jq jid marp zip pandoc msys2 fastfetch dua
-scoop install tealdeer
-tldr --update
+# scoop install tealdeer
+# tldr --update
 scoop install oh-my-posh
 scoop install CascadiaCode-NF-Mono
 
@@ -150,6 +150,7 @@ $json | ConvertTo-Json | Set-Content "$wt_state_path"
 
 scoop install zoom
 scoop install winget
+winget install tldr-pages.tlrc
 
     
 # scoop install vagrant
