@@ -4,19 +4,12 @@ This repository contains scripts designed to streamline the operation of machine
 
 ## For Windows Machines
 
-### Prerequisites
-
-Before running the setup script, ensure that script execution is enabled:
-
-```powershell
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Confirm
-```
-
 ### Setup Process
 
 Initiate the setup process by running the following command in PowerShell:
 
 ```
+Set-ExecutionPolicy Bypass -Scope Process
 iwr -useb https://bit.ly/utas-setup-win | iex
 ```
 
