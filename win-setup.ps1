@@ -182,10 +182,4 @@ $currentProcess = Get-Process WindowsTerminal -ErrorAction SilentlyContinue | Se
 Start-Process wt  
   
 # Stop the current WindowsTerminal process  
-if ($currentProcess) {  
-    Stop-Process -Id $currentProcess.Id  
-} else {  
-    Write-Output "Current WindowsTerminal process not found."  
-}  
-
-# ssh -p 8022 10.
+exit
