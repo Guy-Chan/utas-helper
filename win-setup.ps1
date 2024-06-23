@@ -59,6 +59,8 @@ if (-not(Test-Path $env:scoop)) {
 
 function optional_scoop_install() {
     # scoop install mosh-client
+    scoop bucket add games
+    scoop install steam
     scoop install snipaste
     start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\Snipaste.lnk" -WindowStyle Hidden
     scoop install logseq
