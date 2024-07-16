@@ -112,6 +112,10 @@ scoop install powertoys
 git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
 
 scoop install jq jid marp zip pandoc msys2 fastfetch dua
+
+# Jupyter
+scoop install winpython
+
 # scoop install tealdeer
 # tldr --update
 scoop install oh-my-posh
