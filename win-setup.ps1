@@ -155,8 +155,8 @@ if (-not ($json.PSObject.Properties.Name -contains "dismissedMessages")) {
 $json | ConvertTo-Json | Set-Content "$wt_state_path"
 
 scoop install zoom
-scoop install winget
-winget install tldr-pages.tlrc
+# scoop install winget
+# winget install tldr-pages.tlrc
 
     
 # scoop install vagrant
