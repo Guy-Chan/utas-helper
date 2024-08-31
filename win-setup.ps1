@@ -66,10 +66,7 @@ function optional_scoop_install() {
     scoop install logseq
     scoop install calibre-normal
     scoop install aria-ng-gui
-    scoop install carnac
-    scoop install sysinternals
-    scoop install yt-dlp
-    scoop install firefox vivaldi
+    scoop install firefox opera
     scoop install potplayer
 
     scoop install clash
@@ -111,7 +108,7 @@ scoop config aria2-warning-enabled false
 scoop install powertoys
 git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
 
-scoop install jq jid marp zip pandoc msys2 fastfetch dua
+scoop install jq jid marp zip pandoc carnac sysinternals yt-dlp msys2 fastfetch dua
 
 # Jupyter
 # scoop install winpython
