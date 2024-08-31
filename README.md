@@ -1,25 +1,27 @@
 # UTAS Helper
 
-This repository contains scripts designed to streamline the operation of machines within the university lab, with support for both Windows and macOS platforms.
+This repository contains scripts designed to streamline the setup and operation of machines in the university lab, with initial support for Windows platforms. macOS support will be added soon.
+
+The goal of this project is to fully harness the potential of lab machines. Since students can't always guarantee access to the same machine each time, these scripts help set up the environment quickly and efficiently.
 
 ## For Windows Machines
 
 ### Setup Process
 
-Initiate the setup process by running the following command in PowerShell:
+To start the setup process on a Windows machine, open PowerShell and run the following command:
 
-```
+```powershell
 Set-ExecutionPolicy Bypass -Scope Process
 iwr -useb https://bit.ly/utas-setup-win | iex
 ```
 
-The Windows setup script automates the installation of various tools, including:
-- `jid`
-- `gh`
-- `fastfetch`
-- `dua`
-- `tldr`
-- `python3.12`
-- `VSCode extensions`
+This setup script has been tested on Windows 11 in the Launceston Lab and automates the installation and configuration of various tools, including:
 
-It also configures environment variables, sets up the terminal to use oh-my-zsh, and implements Emacs keybindings. Additionally, it adds useful git aliases such as `git st` for `git status` and `git lg` for checking git logs. For detailed configurations, refer to [git configs](https://github.com/Guy-Chan/utas-helper/blob/ddd7497467071df4573d35bc2338dae21a6d5818/win-setup.ps1#L87). Furthermore, it installs PowerToys for remapping keys, such as Caps Lock as Control and Scroll Lock as Caps Lock.
+- **PowerToys:** Installs PowerToys for remapping keys, such as setting Caps Lock as Control and Scroll Lock as Caps Lock. While this might initially feel uncomfortable due to muscle memory conflicts, it’s worth adapting to. I initially replaced the PowerToys configuration file directly, but updates to PowerToys can change the file location or syntax. That’s why I now use their backup/restore feature. Unfortunately, there's no CLI method to automate this, so when PowerToys starts through the script, you’ll need to manually click the "restore" button to load the configuration for the first time.
+- **Tools:** Installs essential tools such as `jq`, `jid`, `marp` (Markdown to Slides), `gh` (GitHub CLI), `fastfetch`, `dua` (Disk Usage Analyzer), `tldr` (simplified man pages), `carnac` (for displaying keystrokes during demonstrations), `sysinternals` (`ZoomIt` for efficient demonstrations), `yt-dlp`, and `msys2` (which supports `tmux` on Windows), along with several VSCode extensions.
+- **Environment Configuration:** Configures environment variables, sets up the terminal with `oh-my-zsh`, and enables Emacs keybindings by default.
+- **Git Aliases:** Adds useful Git aliases such as `git st` for `git status` and `git lg` for visualizing Git logs. For a complete list, see the [Git configuration section](https://github.com/Guy-Chan/utas-helper/blob/ddd7497467071df4573d35bc2338dae21a6d5818/win-setup.ps1#L87).
+
+### Notes
+
+- **Mac Setup:** A macOS setup script will be added in the future. The delay is due to the need to separate personal credentials from the general configuration. I’m working on finding a clean and elegant solution — perhaps using OneDrive with built-in UTAS account info stored on lab machines, as opposed to manually checking the user as done with the PowerShell script.
