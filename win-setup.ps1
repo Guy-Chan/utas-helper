@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'SilentlyContinue'
 # Ensure the PowerShell profile directory exists
 if (-not (Test-Path $PROFILE)) { 
-    mkdir (Split-Path -Parent $PROFILE) -Force 
+    mkdir "$PROFILE/.." -Force
 }
 
 # Remove existing profile and create a new one
