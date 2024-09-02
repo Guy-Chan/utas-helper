@@ -1,7 +1,6 @@
 $ErrorActionPreference = 'silentlycontinue'
 if (-not(Test-Path $PROFILE)) { mkdir "$PROFILE/.." -Force }
 
-# Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Confirm
 rm $PROFILE -Force
 echo @'
 # set env
@@ -15,9 +14,7 @@ $env:path = ";$env:scoop\apps\git\current\mingw64\bin"`
 + ";$env:path"
 
 set-alias wl-copy set-clipboard
-# set-alias v vagrant
-# set-alias vbm vboxmanage
-# set-alias k kubectl
+
 function helper() { cd "$env:repos/utas-helper" }
 function misc() { cd "$env:utas_repos/utas-misc" }
 function utas() { ."$env:ComSpec/../whoami*" /upn | wl-copy }
@@ -44,7 +41,7 @@ $ErrorActionPreference = 'SilentlyContinue'
 $cmdlet = Get-Command -Name "code" -ErrorAction SilentlyContinue
 if ($cmdlet -eq $null) {
     echo @'
-# add code to env
+# add vscode to env
 $env:path = ";$env:ProgramFiles\Microsoft VS Code\bin"`
 + ";$env:path"
 '@ | ac $PROFILE
@@ -54,21 +51,6 @@ $env:path = ";$env:ProgramFiles\Microsoft VS Code\bin"`
 # allow policy
 if (-not(Test-Path $env:scoop)) {
     iwr -useb get.scoop.sh | iex
-}
-
-function optional_scoop_install() {
-    # scoop install mosh-client
-    scoop bucket add games
-    scoop install steam
-    scoop install snipaste
-    start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\Snipaste.lnk" -WindowStyle Hidden
-    scoop install logseq
-    scoop install calibre-normal
-    scoop install aria-ng-gui
-    scoop install firefox opera
-    scoop install potplayer
-
-    scoop install clash
 }
 
 function code_extensions_install() {
@@ -108,14 +90,8 @@ scoop install powertoys
 git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
 
 scoop install jq jid marp zip pandoc carnac sysinternals yt-dlp msys2 fastfetch dua
-
-# Jupyter
-# scoop install winpython
-
-# scoop install tealdeer
-# tldr --update
-scoop install oh-my-posh
-scoop install CascadiaCode-NF-Mono
+scoop install oh-my-posh CascadiaCode-NF-Mono 
+scoop install zoom
 
 # cp the backup PT settings  
 $ptb="~\Documents\PowerToys\Backup\*ptb"
@@ -127,10 +103,10 @@ if (-not(Test-Path $ptb)) {
 # restore msys2 .profile
 cp "$env:repos\utas-helper\msys2-profile" "$env:scoop\apps\msys2\current\home\$(whoami)\.profile" 
   
-# # Terminate the PowerToys process  
+# Terminate the PowerToys process  
 Get-Process PowerToys -ErrorAction SilentlyContinue | Stop-Process  
   
-# # Start PowerToys  
+# Start PowerToys  
 start -FilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Scoop Apps\PowerToys.lnk" -WindowStyle Hidden  
 
 echo 'oh-my-posh init pwsh | Invoke-Expression' | ac $PROFILE
@@ -150,14 +126,11 @@ if (-not ($json.PSObject.Properties.Name -contains "dismissedMessages")) {
 # Save the modified JSON content  
 $json | ConvertTo-Json | Set-Content "$wt_state_path"
 
-scoop install zoom
-
 # Personal setup, requires $gh_token to be set beforehand.
 if ($gh_token) {
     scoop install gh
     echo $gh_token | gh auth login --with-token
     customization
-    optional_scoop_install
 }
 
 # reload WindowsTerminal
