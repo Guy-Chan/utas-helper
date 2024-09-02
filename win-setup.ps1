@@ -152,28 +152,12 @@ if (-not ($json.PSObject.Properties.Name -contains "dismissedMessages")) {
 $json | ConvertTo-Json | Set-Content "$wt_state_path"
 
 scoop install zoom
-# scoop install winget
-# winget install tldr-pages.tlrc
 
-    
-# scoop install vagrant
-# scoop install vboxvmservice
-# scoop install kubectl
-# scoop install virtualbox-np
-# scoop install audioswitcher
-# scoop install zettlr
-# scoop install aws
-
-# scoop install azure-cli
-# winget install Microsoft.AzureCLI
-
-if ($(whoami) -eq "$USER_GUY") {
+# Personal setup, requires $gh_token to be set beforehand.
+if ($gh_token) {
     scoop install gh
-    gh auth login
-    mkdir ~/repos/utas -Force
-    # personal setup, containing some credentials
-    gh repo clone Guy-Chan/utas-personal "$env:repos/utas-personal"
-    . "$env:repos/utas-personal/utas-win-setup.ps1"
+    echo $gh_token | gh auth login --with-token
+    customization
     optional_scoop_install
 }
 
