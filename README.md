@@ -24,6 +24,6 @@ This setup script has been tested on Windows 11 in the Launceston Lab and automa
 
 ### Notes
 
-- **Mac Setup:** A macOS setup script will be added in the future. The delay is due to the need to separate personal credentials from the general configuration. I’m working on finding a clean and elegant solution — potentially using OneDrive with built-in UTAS account information stored on lab machines, rather than manually checking the user as is currently done with the PowerShell script.
+- **Mac Setup:** A macOS setup script will be added in the future. The delay is due to the need to separate personal credentials from the general configuration.
 
 - **Disclaimer**: This tool is designed for helpful and informative purposes. Please use it responsibly and ethically. Ensure you understand and comply with all relevant legal and ethical guidelines when using this tool.
