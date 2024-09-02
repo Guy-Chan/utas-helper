@@ -114,7 +114,7 @@ if (-not ($json.PSObject.Properties.Name -contains "dismissedMessages")) {
 $json | ConvertTo-Json | Set-Content "$wt_state_path"
 
 # Personal setup, requires $gh_token to be set beforehand.
-if ($gh_token) {
+if (Test-Path variable:\gh_token) {
     scoop install gh
     echo $gh_token | gh auth login --with-token
     customization
