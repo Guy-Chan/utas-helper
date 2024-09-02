@@ -51,7 +51,6 @@ $env:path = ";$env:ProgramFiles\Microsoft VS Code\bin"`
     . $PROFILE
 }
 
-$USER_GUY = 'ychen99'
 # allow policy
 if (-not(Test-Path $env:scoop)) {
     iwr -useb get.scoop.sh | iex
