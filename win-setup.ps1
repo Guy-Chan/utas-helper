@@ -56,7 +56,7 @@ if (-not(Test-Path $env:scoop)) {
 }
 
 # Install and configure Git
-scoop install 7zip@23.01 git # The latest 7zip installed via scoop is broken, fix the version here as a workaround
+scoop install 7zip@23.01 git # Fixing the 7zip version as the latest release via scoop is currently broken
 git config --global alias.fu 'fetch upstream'
 git config --global alias.fo 'fetch origin'
 git config --global alias.co checkout
