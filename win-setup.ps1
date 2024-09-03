@@ -57,6 +57,7 @@ if (-not(Test-Path $env:scoop)) {
 
 # Install and configure Git
 scoop install 7zip@23.01 git # Fixing the 7zip version as the latest release via scoop is currently broken
+
 git config --global alias.fu 'fetch upstream'
 git config --global alias.fo 'fetch origin'
 git config --global alias.co checkout
@@ -72,15 +73,13 @@ git config --global push.default current
 git config --global remote.pushDefault origin
 git config --global pull.rebase false
 
-scoop bucket add extras
-scoop bucket add nerd-fonts
-scoop install aria2
-scoop config aria2-warning-enabled false
-
-scoop install powertoys
 git clone https://github.com/Guy-Chan/utas-helper.git "$env:repos/utas-helper"
 
-scoop install jq jid marp zip pandoc carnac sysinternals yt-dlp msys2 fastfetch dua oh-my-posh CascadiaCode-NF-Mono zoom
+scoop bucket add extras
+scoop bucket add nerd-fonts
+
+scoop install aria2 powertoys jq jid marp zip pandoc carnac sysinternals yt-dlp msys2 fastfetch dua oh-my-posh CascadiaCode-NF-Mono zoom
+scoop config aria2-warning-enabled false
 
 # Restore PowerToys settings
 $ptb="~\Documents\PowerToys\Backup\*ptb"
