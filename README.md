@@ -30,6 +30,7 @@ To start the setup process on a Mac machine, open terminal and run the following
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Guy-Chan/utas-helper/main/mac-setup.sh)"
+source ~/.profile
 ```
 
 ### Notes
