@@ -22,8 +22,16 @@ This setup script has been tested on Windows 11 in the Launceston Lab and automa
 - **Environment Configuration:** Configures environment variables, sets up the terminal with `oh-my-zsh`, and enables Emacs keybindings by default.
 - **Git Aliases:** Adds useful Git aliases such as `git st` for `git status` and `git lg` for visualizing Git logs. For a complete list, see the [Git configuration section](https://github.com/Guy-Chan/utas-helper/blob/main/win-setup.ps1#L89).
 
-### Notes
+## For Mac Machines
 
-- **Mac Setup:** A macOS setup script will be added in the future. The delay is due to the need to separate personal credentials from the general configuration.
+### Setup Process
+
+To start the setup process on a Mac machine, open terminal and run the following command:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Guy-Chan/utas-helper/main/mac-setup.sh)"
+```
+
+### Notes
 
 - **Disclaimer**: This tool is designed for helpful and informative purposes. Please use it responsibly and ethically. Ensure you understand and comply with all relevant legal and ethical guidelines when using this tool.
