@@ -1,6 +1,8 @@
 # Check if 'utas_helper_user_name' is unset and the group name is 'staff'
 if [[ -z "$utas_helper_user_name" && "$(id -gn)" == "staff" ]]; then
     echo "Please set up \$utas_helper_user_name beforehand for VM environment"
+    echo "For exmaple:"
+    echo "$ export utas_helper_user_name='GuyChen'"
     exit 0
 fi
 
@@ -63,8 +65,8 @@ source ~/.zshrc
 # Clone UTAS Helper repository
 git clone https://github.com/Guy-Chan/utas-helper.git ~/repos/utas-helper
 
-# Install GitHub CLI, Raycast and tmux
-brew install gh raycast tmux
+# Install GitHub CLI and Raycast
+brew install gh raycast 
 
 # Lock iTerm2 version to 3.4.23
 brew tap-new $USER/homebrew-lockversions
