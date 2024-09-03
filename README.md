@@ -47,17 +47,17 @@ It automates the installation and configuration of various tools, including:
 
 - **Git Configuration:** Sets up useful Git aliases, such as `git lg` for a graphical log view and `git st` for quick status checks.
 
-- **iTerm2 Version Lock:** Locks iTerm2, a popular terminal emulator for macOS, to version 3.4.23, preserving this specific version against future updates. The repository includes personal iTerm2 settings, and the setup script will clone these into the home directory. You can restore these settings to experience them. I've increased the font size to 24 and set the opacity to 0.33 for better visualization. Additionally, I've configured the option key as the `meta` key within iterm, enabling the use of readline shortcuts for command-line editing. You can explore the complete GNU Readline documentation here: [GNU Readline Library](https://tiswww.case.edu/php/chet/readline/rluserman.html#Commands-For-Moving). Building these shortcuts into muscle memory can significantly improve our CLI experience.
-
 - **Zoom Installation:** Fetches and installs Zoom manually through Homebrew, without requiring root privileges.
+
+- **iTerm2 Version Lock:** Locks iTerm2, a popular terminal emulator for macOS, to version 3.4.23, preserving this specific version against future updates. The repository includes my personal iTerm2 settings, which will be cloned into your home directory during the setup process. You can restore these settings to experience the configuration firsthand. I've increased the font size to 24 and set the opacity to 0.33 for better visualization. Additionally, I've configured the option key as the meta key, enabling the use of Bash built-in readline shortcuts for efficient command-line editing. For more details on these shortcuts, you can explore the [GNU Readline Library](https://tiswww.case.edu/php/chet/readline/rluserman.html#Commands-For-Moving). Building these shortcuts into muscle memory can enhance improve our CLI experience.
 
 - **VSCode Extensions:** Installs a set of VSCode extensions tailored for development, including GitHub Copilot, Python-related tools, and remote SSH capabilities, to enhance your coding and debugging experience on macOS.
 
-- **Utilities and Tools:** Installs various useful command-line tools, such as `tlrc`, `jid`, `pandoc`, `jq`, `zip`, and `dua-cli`, to enhance productivity. These tools are essential for tasks like data processing, text formatting, and disk usage analysis.
+- **Utilities and Tools:** Installs a variety of useful command-line tools, such as `tlrc`, `jid`, `pandoc`, `jq`, `zip`, and `dua-cli`, to enhance productivity. These tools are essential for tasks like data processing, text formatting, and disk usage analysis.
 
 - **Personal Customization:** If a custom `customization` function is defined, the script will execute this function to apply additional personal preferences, ensuring your environment is tailored to your specific needs.
 
-- **KIT718 and KIT719 Dependencies:** Installs specific dependencies required for the KIT718 and KIT719 units, such as Python packages for data science (`matplotlib`, `scikit-learn`, `pandas`, `scikit-image`) and a Sense HAT emulator for KIT719. These are commented out by default and included for demonstration purposes only, as their execution time can be substantial.
+- **KIT718 and KIT719 Dependencies:** Installs specific dependencies required for the KIT718 and KIT719 units, such as Python packages for data science (`matplotlib`, `scikit-learn`, `pandas`, `scikit-image`) and a Sense HAT emulator for KIT719. These are commented out by default and included for demonstration purposes only, due to the execution time would be tremendous.
 
 ### Notes
 
