@@ -19,10 +19,13 @@ alias kit502="${ssh_kit502}"
 alias kit502-ssh="echo ${ssh_kit502} | wl-copy" # copy kit502 ssh command for vscode remote debug configuration
 alias ll='ls -laF'
 alias t='tmux'
+alias awake='caffeinate -d' # Keeping awake
+
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
 keygen() {
-[[ -d "$HOME/.ssh" ]] || \
-ssh-keygen -b 4096 -C "${username}@utas.edu.au" -t ed25519
+    [[ -d "$HOME/.ssh" ]] || \
+        ssh-keygen -b 4096 -C "${username}@utas.edu.au" -t ed25519
 }
 EOF
 
@@ -66,7 +69,7 @@ source ~/.zshrc
 git clone https://github.com/Guy-Chan/utas-helper.git ~/repos/utas-helper
 
 # Install GitHub CLI and Raycast
-brew install gh raycast 
+brew install gh raycast
 
 # Lock iTerm2 version to 3.4.23
 brew tap-new $USER/homebrew-lockversions
