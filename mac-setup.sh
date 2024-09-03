@@ -115,7 +115,7 @@ code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension foxundermoon.shell-format
 
 # Install additional useful utilities
-brew install asciiquarium tlrc jid pandoc marp-cli jq zip dua-cli yt-dlp
+brew install tlrc jid pandoc marp-cli jq zip dua-cli yt-dlp
 
 # Personal setup, requires function `customization` to be defined beforehand.
 if [ -n "$(type -t customization)" ] && [ "$(type -t customization)" = function ]; then
