@@ -29,7 +29,7 @@ This setup script has been tested on Windows 11 in the Launceston Lab and automa
 To start the setup process on a Mac machine, open Terminal and run the following command:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Guy-Chan/utas-helper/main/mac-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://bit.ly/utas-setup-mac)"
 source ~/.profile
 ```
 
