@@ -1,6 +1,6 @@
 # UTAS Helper
 
-This repository contains scripts designed to streamline the setup and operation of machines in the university lab, with initial support for Windows platforms. macOS support will be added soon.
+This repository contains scripts designed to streamline the setup and operation of machines in the university lab, with support for both windows and macOS.
 
 The goal of this project is to fully harness the potential of lab machines. Since students can't always guarantee access to the same machine each time, these scripts help set up the environment quickly and efficiently.
 
