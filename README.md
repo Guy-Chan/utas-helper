@@ -1,6 +1,6 @@
 # UTAS Helper
 
-This repository contains scripts designed to streamline the setup and operation of machines in the university lab, with initial support for Windows platforms. macOS support will be added soon.
+This repository contains scripts designed to streamline the setup and operation of machines in the university lab, with support for both windows and macOS.
 
 The goal of this project is to fully harness the potential of lab machines. Since students can't always guarantee access to the same machine each time, these scripts help set up the environment quickly and efficiently.
 
@@ -29,7 +29,7 @@ This setup script has been tested on Windows 11 in the Launceston Lab and automa
 To start the setup process on a Mac machine, open Terminal and run the following command:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Guy-Chan/utas-helper/main/mac-setup.sh)"
+/bin/bash -c "$(curl -fsSL https://bit.ly/utas-setup-mac)"
 source ~/.profile
 ```
 
@@ -47,7 +47,7 @@ It automates the installation and configuration of various tools, including:
 
 - **Git Configuration:** Sets up useful Git aliases, such as `git lg` for a graphical log view and `git st` for quick status checks.
 
-- **Zoom Installation:** Fetches and installs Zoom manually through Homebrew, without requiring root privileges.
+- **Zoom Installation:** Installs Zoom via Homebrew without requiring root privileges. Since Zoom is not pre-installed on the lab's Mac machines, this ensures students can attend Zoom sessions while working in the Mac lab. This can be particularly helpful, saving students from having to stash their work and switch to a Windows machine just to join a Zoom meeting.
 
 - **iTerm2 Version Lock:** Locks iTerm2, a popular terminal emulator for macOS, to version 3.4.23, preserving this specific version against future updates. The repository includes my personal iTerm2 settings, which will be cloned into your home directory during the setup process. You can restore these settings to experience the configuration firsthand. I've increased the font size to 24 and set the opacity to 0.33 for better visualization. Additionally, I've configured the option key as the meta key, enabling the use of Bash built-in readline shortcuts for efficient command-line editing. For more details on these shortcuts, you can explore the [GNU Readline Library](https://tiswww.case.edu/php/chet/readline/rluserman.html#Commands-For-Moving). Building these shortcuts into muscle memory can enhance improve our CLI experience.
 
