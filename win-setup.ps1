@@ -22,8 +22,8 @@ Set-Alias wl-copy Set-Clipboard
 # Functions for convenience
 function helper() { cd "$env:repos/utas-helper" }
 function utas() { ."$env:ComSpec/../whoami*" /upn | wl-copy } # set utas email to the clipboard, can be quite handy sometimes
-function k501() { ssh "$env:USERNAME@ictteach.its.utas.edu.au" } # ssh to KIT501 lab server
-function k502() { ssh "$env:USERNAME@ictteach-www.its.utas.edu.au" } # ssh to KIT502 lab server
+function kit501() { ssh "$env:USERNAME@ictteach.its.utas.edu.au" } # ssh to KIT501 lab server
+function kit502() { ssh "$env:USERNAME@ictteach-www.its.utas.edu.au" } # ssh to KIT502 lab server
 '@ | ac $PROFILE
 . $PROFILE
 
