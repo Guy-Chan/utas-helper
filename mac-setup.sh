@@ -123,7 +123,23 @@ if [ -n "$(type -t customization)" ] && [ "$(type -t customization)" = function 
 fi
 
 # KIT718 dependencies
+# brew install openjdk@11
 # pip3 install matplotlib==3.7.5 scikit-learn pandas scikit-image PyArrow pyspark findspark grpcio google
+#
+# jupyter pyspark init:
+# ```python
+# import os
+#
+# JAVA_HOME = "/opt/homebrew/opt/openjdk@11"
+# os.environ["JAVA_HOME"] = JAVA_HOME
+#
+# import findspark
+# findspark.init()
+# from pyspark import SparkContext
+# from pyspark.sql import SparkSession
+# sc = SparkContext("local", "KIT718")
+# spark = SparkSession.builder.appName("KIT718").getOrCreate()
+# ```
 
 # KIT719 sense-hat-emulator
 # brew install pipx pygobject3 gtk+3
