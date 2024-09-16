@@ -123,7 +123,7 @@ if [ -n "$(type -t customization)" ] && [ "$(type -t customization)" = function 
 fi
 
 # KIT718 dependencies
-# pip3 install matplotlib==3.7.5 scikit-learn pandas scikit-image
+# pip3 install matplotlib==3.7.5 scikit-learn pandas scikit-image PyArrow pyspark findspark grpcio google
 
 # KIT719 sense-hat-emulator
 # brew install pipx pygobject3 gtk+3
