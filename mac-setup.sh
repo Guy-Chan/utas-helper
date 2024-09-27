@@ -8,13 +8,15 @@ fi
 
 # Determine the username to use
 username="${utas_helper_user_name:-$(whoami)}"
+host_501="ictteach.its.utas.edu.au"
+host_502="ictteach-www.its.utas.edu.au"
+ssh_kit502="ssh ${username}@${host_502}"
 
 # Write the aliases and functions to the .profile
 tee "$HOME/.profile" <<EOF >/dev/null
 alias wl-copy='pbcopy'
 alias utas="echo -n ${username}@utas.edu.au | wl-copy"
-alias kit501="ssh ${username}@ictteach.its.utas.edu.au"
-ssh_kit502="ssh ${username}@ictteach-www.its.utas.edu.au"
+alias kit501="ssh ${username}@${host_501}"
 alias kit502="${ssh_kit502}"
 alias kit502-ssh="echo ${ssh_kit502} | wl-copy" # copy kit502 ssh command for vscode remote debug configuration
 alias ll='ls -laF'
@@ -123,7 +125,9 @@ if [ -n "$(type -t customization)" ] && [ "$(type -t customization)" = function 
 fi
 
 # KIT718 dependencies
-# brew install openjdk@11
+# brew install apache-spark
+# cd ~/Library/Python/*/lib/python/site-packages
+# jupyter-kernelspec install sparkmagic/kernels/pysparkkernel
 # pip3 install matplotlib==3.7.5 scikit-learn pandas scikit-image PyArrow pyspark findspark grpcio google
 #
 # jupyter pyspark init:
