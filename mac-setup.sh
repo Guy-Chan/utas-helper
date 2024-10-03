@@ -125,17 +125,20 @@ if [ -n "$(type -t customization)" ] && [ "$(type -t customization)" = function 
 fi
 
 # KIT718 dependencies
-# brew install apache-spark
+# brew install spark
+# ~/.local/bin/pip3 install --break-system-packages sparkmagic matplotlib==3.7.5 scikit-learn pandas scikit-image PyArrow pyspark findspark grpcio google 
 # cd ~/Library/Python/*/lib/python/site-packages
 # jupyter-kernelspec install sparkmagic/kernels/pysparkkernel
-# pip3 install matplotlib==3.7.5 scikit-learn pandas scikit-image PyArrow pyspark findspark grpcio google
 #
 # jupyter pyspark init:
 # ```python
 # import os
+# import glob
 #
-# JAVA_HOME = "/opt/homebrew/opt/openjdk@11"
-# os.environ["JAVA_HOME"] = JAVA_HOME
+# java_home_pattern = os.path.join(os.getenv("HOME"), ".local/Cellar/openjdk@*/*/")
+# java_home_dirs = glob.glob(java_home_pattern)
+#
+# os.environ["JAVA_HOME"] = java_home_dirs[0]
 #
 # import findspark
 # findspark.init()
