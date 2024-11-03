@@ -14,6 +14,7 @@ ssh_kit502="ssh ${username}@${host_502}"
 
 # Write the aliases and functions to the .profile
 tee "$HOME/.profile" <<EOF >/dev/null
+alias b='brew'
 alias wl-copy='pbcopy'
 alias utas="echo -n ${username}@utas.edu.au | wl-copy"
 alias kit501="ssh ${username}@${host_501}"
