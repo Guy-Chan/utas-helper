@@ -71,6 +71,8 @@ source ~/.zshrc
 # Clone UTAS Helper repository
 git clone https://github.com/Guy-Chan/utas-helper.git ~/repos/utas-helper
 
+alias b='brew'
+
 # Install GitHub CLI and Raycast
 b install gh raycast
 
