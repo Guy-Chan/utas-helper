@@ -14,7 +14,6 @@ ssh_kit502="ssh ${username}@${host_502}"
 
 # Write the aliases and functions to the .profile
 tee "$HOME/.profile" <<EOF >/dev/null
-alias b='brew'
 alias wl-copy='pbcopy'
 alias utas="echo -n ${username}@utas.edu.au | wl-copy"
 alias kit501="ssh ${username}@${host_501}"
@@ -71,14 +70,12 @@ source ~/.zshrc
 # Clone UTAS Helper repository
 git clone https://github.com/Guy-Chan/utas-helper.git ~/repos/utas-helper
 
-alias b='brew'
-
 # Install GitHub CLI and Raycast
-b install gh raycast
+brew install gh raycast
 
 # Lock iTerm2 version to 3.4.23
-b tap-new $USER/homebrew-lockversions
-cd $(b --repo $USER/homebrew-lockversions)
+brew tap-new $USER/homebrew-lockversions
+cd $(brew --repo $USER/homebrew-lockversions)
 mkdir -p Casks/i
 
 tee Casks/i/iterm2.rb <<EOF >/dev/null
@@ -102,10 +99,10 @@ zap trash: [
 end
 EOF
 
-b install --cask $USER/homebrew-lockversions/iterm2
+brew install --cask $USER/homebrew-lockversions/iterm2
 
 # Install Zoom by fetching the package and extracting it manually
-b fetch zoom
+brew fetch zoom
 xar -xf ~/Library/Caches/Homebrew/Cask/zoom--*.pkg
 cpio -i --file zoomus.pkg/Payload
 mv zoom.us.app ~/Applications
@@ -120,7 +117,7 @@ code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension foxundermoon.shell-format
 
 # Install additional useful utilities
-b install tlrc jid pandoc jq zip dua-cli
+brew install tlrc jid pandoc jq zip dua-cli
 
 # Personal setup, requires function `customization` to be defined beforehand.
 if [ -n "$(type -t customization)" ] && [ "$(type -t customization)" = function ]; then
@@ -128,7 +125,7 @@ if [ -n "$(type -t customization)" ] && [ "$(type -t customization)" = function 
 fi
 
 # KIT718 dependencies
-# b install spark
+# brew install spark
 # ~/.local/bin/pip3 install --break-system-packages sparkmagic matplotlib==3.7.5 scikit-learn pandas scikit-image PyArrow pyspark findspark grpcio google 
 # cd ~/Library/Python/*/lib/python/site-packages
 # jupyter-kernelspec install sparkmagic/kernels/pysparkkernel
@@ -152,7 +149,7 @@ fi
 # ```
 
 # KIT719 sense-hat-emulator
-# b install pipx pygobject3 gtk+3
+# brew install pipx pygobject3 gtk+3
 # pipx install --system-site-packages sense-emu
 # echo 'source ~/Library/Application\ Support/pipx/venvs/sense-emu/bin/activate && code && sense_emu_gui' > ~/.local/bin/hat-emulator
 # chmod +x ~/.local/bin/hat-emulator
