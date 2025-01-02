@@ -49,16 +49,20 @@ It automates the installation and configuration of various tools, including:
 
 - **Zoom Installation:** Installs Zoom via Homebrew without requiring root privileges. Since Zoom is not pre-installed on the lab's Mac machines, this setup allows students to attend Zoom sessions while continuing their work in the Mac lab. This helps avoid the inconvenience of switching to a Windows machine. However, please note that screen sharing is not permitted on the lab's macOS machines due to permission restrictions.
 
-- **iTerm2 Version Lock:** Locks iTerm2, a popular terminal emulator for macOS, to version 3.4.23, preserving this specific version against future updates. The repository includes my personal iTerm2 settings, which will be cloned into your home directory during the setup process. You can restore these settings to experience the configuration firsthand. I've increased the font size to 24 and set the opacity to 0.33 for better visualization. Additionally, I've configured the option key as the meta key, enabling the use of Bash built-in readline shortcuts for efficient command-line editing. For more details on these shortcuts, you can explore the [GNU Readline Library](https://tiswww.case.edu/php/chet/readline/rluserman.html#Commands-For-Moving). Building these shortcuts into muscle memory can enhance improve our CLI experience.
+- **iTerm2 Version Lock:** Locks iTerm2, a popular terminal emulator for macOS, to version 3.4.23, preserving this specific version against future updates. The repository includes my personal iTerm2 settings, which will be cloned into your home directory during the setup process. You can restore these settings to experience the configuration firsthand. I've increased the font size to 24 and set the opacity to 0.33 for better visualization. Additionally, I've configured the option key as the meta key, enabling the use of Bash built-in readline shortcuts for efficient command-line editing. For more details on these shortcuts, you can explore the [GNU Readline Library](https://tiswww.case.edu/php/chet/readline/rluserman.html#Commands-For-Moving). Building these shortcuts into muscle memory can enhance your CLI experience.
 
 - **VSCode Extensions:** Installs a set of VSCode extensions tailored for development, including GitHub Copilot, Python-related tools, and remote SSH capabilities, to enhance your coding and debugging experience on macOS.
 
 - **Utilities and Tools:** Installs a variety of useful command-line tools, such as `tlrc`, `jid`, `pandoc`, `jq`, `zip`, and `dua-cli`, to enhance productivity. These tools are essential for tasks like data processing, text formatting, and disk usage analysis.
 
+- **VisualBoyAdvance-M:** Installs VisualBoyAdvance-M, a versatile and user-friendly Game Boy emulator. It supports a wide range of Game Boy systems (original, Color, and Advance) and features tools like save states, screen recording, and debugging functionalities. This is a handy utility for both gaming enthusiasts and developers working with retro games.
+
+- **AltServer:** Installs AltServer, a tool for sideloading iOS apps onto your devices without jailbreaking. This utility allows you to deploy custom or third-party apps, providing flexibility for developers and advanced users to test and use apps outside the App Store ecosystem.
+
 - **Personal Customization:** If a custom `customization` function is defined, the script will execute this function to apply additional personal preferences, ensuring your environment is tailored to your specific needs.
 
 - **KIT718 and KIT719 Dependencies:** Installs specific dependencies required for the KIT718 and KIT719 units, such as Python packages for data science (`matplotlib`, `scikit-learn`, `pandas`, `scikit-image`) and a Sense HAT emulator for KIT719. These are commented out by default and included for demonstration purposes only, due to the execution time would be tremendous.
 
-### Notes
+## Notes
 
 - **Disclaimer**: This tool is designed for helpful and informative purposes. Please use it responsibly and ethically. Ensure you understand and comply with all relevant legal and ethical guidelines when using this tool.

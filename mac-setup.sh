@@ -118,7 +118,7 @@ code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension foxundermoon.shell-format
 
 # Install additional useful utilities
-brew install tlrc jid pandoc jq zip dua-cli
+brew install tlrc jid pandoc jq zip dua-cli visualboyadvance-m altserver
 
 # Personal setup, requires function `customization` to be defined beforehand.
 if [ -n "$(type -t customization)" ] && [ "$(type -t customization)" = function ]; then
