@@ -149,7 +149,7 @@ fi
 # spark = SparkSession.builder.appName("KIT718").getOrCreate()
 # ```
 
-# KIT719 sense-hat-emulator
+# KIT717 sense-hat-emulator
 # brew install pipx pygobject3 gtk+3
 # pipx install --system-site-packages sense-emu
 # echo 'source ~/Library/Application\ Support/pipx/venvs/sense-emu/bin/activate && code && sense_emu_gui' > ~/.local/bin/hat-emulator
