@@ -35,7 +35,8 @@
           "com.apple.security.app-sandbox",
           "com.apple.security.application-groups",
           "com.apple.security.network.client",
-          "com.apple.security.network.server"
+          "com.apple.security.network.server",
+          "beta-reports-active"
         ],
         "privacy": {
           "NSFaceIDUsageDescription": "Authentication with Face ID.",
