@@ -1,0 +1,58 @@
+{
+  "name": "Code App Source",
+  "identifier": "com.thebaselab.codeapp.source",
+  "website": "https://thebaselab.com/code",
+  "subtitle": "A full-fledged code editor for iPad",
+  "description": "Code App brings desktop-like editing experience to iPad. Features include:\n\n• Version Control (Git)\n• Embedded terminal\n• Local web development environment (Node + PHP)\n• Built-in Python runtime\n• C/C++ Runtime with WebAssembly\n• Local Java (OpenJDK)\n• SSH Support\n• LSP support (Python & Java)",
+  "tintColor": "007AFF",
+  "iconURL": "https://code.thebaselab.com/~gitbook/image?url=https%3A%2F%2F2795973332-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FzNRZttJUHODcLjBFRZHP%252Ficon%252FSdQ6kQQIZ9j34P2N8lpQ%252Ficon.png%3Falt%3Dmedia%26token%3D241051e1-df50-41a0-a989-6110631a52f4&width=32&dpr=4&quality=100&sign=ea95ddeb&sv=2",
+  "headerURL": "https://thebaselab.com/code/header.png",
+  "apps": [
+    {
+      "beta": false,
+      "name": "Code App",
+      "bundleIdentifier": "com.thebaselab.codeapp",
+      "developerName": "The Base Lab",
+      "subtitle": "A full-fledged code editor for iPad",
+      "version": "1.10.2",
+      "versionDate": "2025-04-06",
+      "versionDescription": "Latest release of Code App for iPad",
+      "downloadURL": "https://github.com/thebaselab/codeapp/releases/download/1.10.2/Code.ipa",
+      "localizedDescription": "Code App is a powerful code editor for iPad that brings desktop-like editing experience to your tablet. It supports multiple programming languages, version control, and various development tools.",
+      "iconURL": "https://code.thebaselab.com/~gitbook/image?url=https%3A%2F%2F2795973332-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FzNRZttJUHODcLjBFRZHP%252Ficon%252FSdQ6kQQIZ9j34P2N8lpQ%252Ficon.png%3Falt%3Dmedia%26token%3D241051e1-df50-41a0-a989-6110631a52f4&width=32&dpr=4&quality=100&sign=ea95ddeb&sv=2",
+      "tintColor": "007AFF",
+      "category": "developer-tools",
+      "size": 50000000,
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/thebaselab/codeapp/main/screenshots/1.png",
+        "https://raw.githubusercontent.com/thebaselab/codeapp/main/screenshots/2.png",
+        "https://raw.githubusercontent.com/thebaselab/codeapp/main/screenshots/3.png"
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.kernel.increased-memory-limit",
+          "com.apple.developer.user-fonts",
+          "com.apple.security.app-sandbox",
+          "com.apple.security.application-groups",
+          "com.apple.security.network.client"
+        ],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "Code App needs access to your local network to discover and connect to development servers.",
+          "NSDocumentsFolderUsageDescription": "Code App needs access to your documents to open and save code files."
+        }
+      },
+      "versions": [
+        {
+          "version": "1.10.2",
+          "date": "2025-04-06",
+          "localizedDescription": "Latest release of Code App for iPad",
+          "downloadURL": "https://github.com/thebaselab/codeapp/releases/download/1.10.2/Code.ipa",
+          "size": 50000000
+        }
+      ]
+    }
+  ],
+  "sourceURL": "https://raw.githubusercontent.com/thebaselab/codeapp/main/codeapp-source.json",
+  "news": [],
+  "userInfo": {}
+} 
