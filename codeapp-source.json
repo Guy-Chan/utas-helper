@@ -11,7 +11,7 @@
     {
       "beta": false,
       "name": "Code App",
-      "bundleIdentifier": "com.thebaselab.codeapp",
+      "bundleIdentifier": "thebaselab.VS-Code",
       "developerName": "The Base Lab",
       "subtitle": "A full-fledged code editor for iPad",
       "version": "1.10.2",
