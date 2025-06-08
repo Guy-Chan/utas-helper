@@ -39,9 +39,7 @@
         ],
         "privacy": {
           "NSFaceIDUsageDescription": "Authentication with Face ID.",
-          "NSPhotoLibraryAddUsageDescription": "Access to Photo Library is required to save images.",
-          "NSLocalNetworkUsageDescription": "Code App needs access to your local network to discover and connect to development servers.",
-          "NSDocumentsFolderUsageDescription": "Code App needs access to your documents to open and save code files."
+          "NSPhotoLibraryAddUsageDescription": "Access to Photo Library is required to save images."
         }
       },
       "versions": [
