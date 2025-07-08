@@ -1,13 +1,71 @@
 {
-  "name": "Code App Source",
-  "identifier": "com.thebaselab.codeapp.source",
-  "website": "https://thebaselab.com/code",
-  "subtitle": "A full-fledged code editor for iPad",
-  "description": "Code App brings desktop-like editing experience to iPad. Features include:\n\n• Version Control (Git)\n• Embedded terminal\n• Local web development environment (Node + PHP)\n• Built-in Python runtime\n• C/C++ Runtime with WebAssembly\n• Local Java (OpenJDK)\n• SSH Support\n• LSP support (Python & Java)",
-  "tintColor": "007AFF",
-  "iconURL": "https://2795973332-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FzNRZttJUHODcLjBFRZHP%2Ficon%2FSdQ6kQQIZ9j34P2N8lpQ%2Ficon.png?alt=media&token=241051e1-df50-41a0-a989-6110631a52f4",
-  "headerURL": "https://2795973332-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FzNRZttJUHODcLjBFRZHP%2Ficon%2FSdQ6kQQIZ9j34P2N8lpQ%2Ficon.png?alt=media&token=241051e1-df50-41a0-a989-6110631a52f4",
+  "name": "YAAAS Source",
+  "subtitle": "Yet Another Amazing Apps Source",
+  "description": "This source provides powerful iPad apps for productivity and development. Currently included:\n\n• Code App: A full-fledged code editor for iPad, featuring version control (Git), embedded terminal, local web development (Node + PHP), built-in Python runtime, C/C++ with WebAssembly, local Java (OpenJDK), SSH support, and LSP support (Python & Java).\n• InfusePlus: An enhancer for the Infuse iOS app, adding advanced features and integrations for a better media experience.",
+  "featuredApps": [
+    "com.firecore.infuse",
+    "thebaselab.VS-Code"
+  ],
   "apps": [
+    {
+      "beta": false,
+      "name": "InfusePlus",
+      "bundleIdentifier": "com.firecore.infuse",
+      "developerName": "dayanch96",
+      "subtitle": "Enhancer for Infuse iOS app",
+      "version": "2.2",
+      "versionDate": "2025-05-15",
+      "versionDescription": "Latest release of InfusePlus App",
+      "downloadURL": "https://github.com/dvntm0/AltStore/releases/download/0.0.1/infp_2.2+8.1.6.ipa",
+      "localizedDescription": "Enhancer for Infuse iOS app.",
+      "iconURL": "https://raw.githubusercontent.com/dayanch96/InfusePlus/refs/heads/main/Resources/icon.png",
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/dayanch96/InfusePlus/refs/heads/main/Resources/screenshot1.png",
+        "https://raw.githubusercontent.com/dayanch96/InfusePlus/refs/heads/main/Resources/screenshot2.png",
+        "https://raw.githubusercontent.com/dayanch96/InfusePlus/refs/heads/main/Resources/screenshot3.png"
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.security.app-sandbox",
+          "com.apple.security.network.client",
+          "com.apple.security.network.server",
+          "com.apple.developer.networking.networkextension",
+          "com.apple.developer.bluetooth",
+          "com.apple.developer.homekit",
+          "com.apple.developer.in-app-payments",
+          "com.apple.developer.pushkit.unrestricted-voip",
+          "com.apple.developer.user-fonts",
+          "com.apple.developer.kernel.increased-memory-limit",
+          "com.apple.security.application-groups",
+          "com.apple.security.files.user-selected.read-write",
+          "com.apple.security.device.audio-input",
+          "com.apple.security.device.camera",
+          "com.apple.security.personal-information.photos-library",
+          "com.apple.security.personal-information.music-library",
+          "com.apple.security.networking.wifi-info",
+          "com.apple.security.device.bluetooth"
+        ],
+        "privacy": {
+          "NSAppleMusicUsageDescription": "Please allow access in order to show iTunes videos.",
+          "NSBluetoothAlwaysUsageDescription": "Used to discover nearby Cast devices",
+          "NSBluetoothPeripheralUsageDescription": "Used for streaming media to external devices",
+          "NSCameraUsageDescription": "Used for scanning QR codes",
+          "NSFaceIDUsageDescription": "Used for unlocking your device when restrictions are enabled",
+          "NSLocalNetworkUsageDescription": "Used to discover network shares and Google Cast devices in your local network",
+          "NSMicrophoneUsageDescription": "Used for pairing with external devices",
+          "NSPhotoLibraryAddUsageDescription": "Used for saving QR code"
+        }
+      },
+      "versions": [
+        {
+          "version": "2.2",
+          "date": "2025-05-15",
+          "localizedDescription": "Latest release of InfusePlus App",
+          "downloadURL": "https://github.com/dvntm0/AltStore/releases/download/0.0.1/infp_2.2+8.1.6.ipa",
+          "size": 50000000
+        }
+      ]
+    },
     {
       "beta": false,
       "name": "Code App",
