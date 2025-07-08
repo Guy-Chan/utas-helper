@@ -13,7 +13,7 @@
       "bundleIdentifier": "com.firecore.infuse",
       "developerName": "dayanch96",
       "subtitle": "Enhancer for Infuse iOS app",
-      "version": "2.2",
+      "version": "8.1.6",
       "versionDate": "2025-05-15",
       "versionDescription": "Latest release of InfusePlus App",
       "downloadURL": "https://github.com/dvntm0/AltStore/releases/download/0.0.1/infp_2.2+8.1.6.ipa",
@@ -58,7 +58,7 @@
       },
       "versions": [
         {
-          "version": "2.2",
+          "version": "8.1.6",
           "date": "2025-05-15",
           "localizedDescription": "Latest release of InfusePlus App",
           "downloadURL": "https://github.com/dvntm0/AltStore/releases/download/0.0.1/infp_2.2+8.1.6.ipa",
