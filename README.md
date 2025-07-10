@@ -12,7 +12,7 @@ To start the setup process on a Windows machine, open PowerShell and run the fol
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process
-iwr -useb https://bit.ly/utas-setup-win | iex
+iwr -useb https://raw.githubusercontent.com/guy-chen-codes/utas-helper/main/win-setup.ps1 | iex
 ```
 
 This setup script has been tested on Windows 11 in the Launceston Lab and automates the installation and configuration of various tools, including:
@@ -29,7 +29,7 @@ This setup script has been tested on Windows 11 in the Launceston Lab and automa
 To start the setup process on a Mac machine, open Terminal and run the following command:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://bit.ly/utas-setup-mac)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/guy-chen-codes/utas-helper/main/mac-setup.sh)"
 source ~/.profile
 ```
 
